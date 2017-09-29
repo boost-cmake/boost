@@ -1,0 +1,21 @@
+# Copyright (C) 2016 Daniel James.
+# Distributed under the Boost Software License, Version 1.0. (See accompanying
+# file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+
+addons:
+    apt:
+        packages:
+            - libboost-dev
+            - xsltproc
+            - python-lxml
+            - docbook-xsl
+            - docbook-xml
+
+before_script:
+    - touch Jamroot.jam
+
+script:
+    - cd ${TRAVIS_BUILD_DIR}/test
+    - bjam -q ${BJAM_TOOLSET}
+    - cd ${TRAVIS_BUILD_DIR}/test/more
+    - python run-tests.py

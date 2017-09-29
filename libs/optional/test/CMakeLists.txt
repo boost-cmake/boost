@@ -1,0 +1,81 @@
+include(BCMTest)
+
+find_package(boost_tuple)
+find_package(boost_bind)
+
+bcm_test_link_libraries(boost_optional
+boost::tuple
+boost::bind
+)
+
+# Boost.Optional Library test Jamfile
+#
+# Copyright (C) 2003, Fernando Luis Cacciola Carballal.
+# Copyright (C) 2014 - 2016 Andrzej Krzemienski
+#
+# Use, modification, and distribution is subject to the Boost Software
+# License, Version 1.0. (See accompanying file LICENSE_1_0.txt or copy at
+# http://www.boost.org/LICENSE_1_0.txt)
+#
+# See http://www.boost.org/libs/optional for documentation.
+#
+# You are welcome to contact the author at:
+#  akrzemi1@gmail.com
+#
+
+
+bcm_test(NAME optional_test SOURCES optional_test.cpp)
+bcm_test(NAME optional_test_swap SOURCES optional_test_swap.cpp)
+bcm_test(NAME optional_test_conversions_from_U SOURCES optional_test_conversions_from_U.cpp)
+bcm_test(NAME optional_test_convert_from_T SOURCES optional_test_convert_from_T.cpp)
+bcm_test(NAME optional_test_empty_braces SOURCES optional_test_empty_braces.cpp)
+bcm_test(NAME optional_test_tie SOURCES optional_test_tie.cpp)
+bcm_test(NAME optional_test_ref_assign_portable_minimum SOURCES optional_test_ref_assign_portable_minimum.cpp)
+bcm_test(NAME optional_test_ref_assign_mutable_int SOURCES optional_test_ref_assign_mutable_int.cpp)
+bcm_test(NAME optional_test_ref_assign_const_int SOURCES optional_test_ref_assign_const_int.cpp)
+bcm_test(NAME optional_test_ref_converting_ctor SOURCES optional_test_ref_converting_ctor.cpp)
+bcm_test(NAME optional_test_ref_convert_assign_non_int SOURCES optional_test_ref_convert_assign_non_int.cpp)
+bcm_test(NAME optional_test_ref_convert_assign_mutable_int SOURCES optional_test_ref_convert_assign_mutable_int.cpp)
+bcm_test(NAME optional_test_ref_convert_assign_const_int SOURCES optional_test_ref_convert_assign_const_int.cpp)
+bcm_test(NAME optional_test_ref_portable_minimum SOURCES optional_test_ref_portable_minimum.cpp)
+bcm_test(NAME optional_test_ref_move SOURCES optional_test_ref_move.cpp)
+bcm_test(NAME optional_test_ref_to_val SOURCES optional_test_ref_to_val.cpp)
+bcm_test(NAME optional_test_inplace_factory SOURCES optional_test_inplace_factory.cpp)
+bcm_test(NAME optional_test_io SOURCES optional_test_io.cpp)
+bcm_test(NAME optional_test_move SOURCES optional_test_move.cpp)
+bcm_test(NAME optional_test_noexcept_move SOURCES optional_test_noexcept_move.cpp)
+bcm_test(NAME optional_test_equals_none SOURCES optional_test_equals_none.cpp)
+bcm_test(NAME optional_test_value_access SOURCES optional_test_value_access.cpp)
+bcm_test(NAME optional_test_emplace SOURCES optional_test_emplace.cpp)
+bcm_test(NAME optional_test_minimum_requirements SOURCES optional_test_minimum_requirements.cpp)
+bcm_test(NAME optional_test_msvc_bug_workaround SOURCES optional_test_msvc_bug_workaround.cpp)
+bcm_test(NAME optional_test_sfinae_friendly_ctor SOURCES optional_test_sfinae_friendly_ctor.cpp COMPILE_ONLY)
+bcm_test(NAME optional_test_ref_convert_assign_const_int_prevented SOURCES optional_test_ref_convert_assign_const_int_prevented.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_fail1 SOURCES optional_test_fail1.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_fail3a SOURCES optional_test_fail3a.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_fail3b SOURCES optional_test_fail3b.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_ref_fail1 SOURCES optional_test_ref_fail1.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_ref_fail3 SOURCES optional_test_ref_fail3.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_ref_fail4 SOURCES optional_test_ref_fail4.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_inplace_fail SOURCES optional_test_inplace_fail.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_inplace_fail2 SOURCES optional_test_inplace_fail2.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_fail_implicit_bool_convert SOURCES optional_test_fail_implicit_bool_convert.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_fail_copying_a_moveable_type SOURCES optional_test_fail_copying_a_moveable_type.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_fail_optional_rvalue_ref SOURCES optional_test_fail_optional_rvalue_ref.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_ref_fail_init_from_Trefref SOURCES optional_test_ref_fail_init_from_Trefref.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_ref_fail_init_from_Urefref SOURCES optional_test_ref_fail_init_from_Urefref.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_ref_fail_assign_from_Trefref SOURCES optional_test_ref_fail_assign_from_Trefref.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_ref_fail_assign_from_Urefref SOURCES optional_test_ref_fail_assign_from_Urefref.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_fail_convert_from_null SOURCES optional_test_fail_convert_from_null.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_fail_explicit_convert_in_value_or SOURCES optional_test_fail_explicit_convert_in_value_or.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_fail_explicit_convert_in_value_or_call SOURCES optional_test_fail_explicit_convert_in_value_or_call.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_fail_io_without_io SOURCES optional_test_fail_io_without_io.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_fail_none_io_without_io SOURCES optional_test_fail_none_io_without_io.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_test_fail_convert_assign_of_enums SOURCES optional_test_fail_convert_assign_of_enums.cpp COMPILE_ONLY WILL_FAIL)
+bcm_test(NAME optional_xconfig_NO_PROPER_ASSIGN_FROM_CONST_INT_pass SOURCES optional_xconfig_NO_PROPER_ASSIGN_FROM_CONST_INT_pass.cpp)
+bcm_test(NAME optional_xconfig_NO_PROPER_ASSIGN_FROM_CONST_INT_fail SOURCES optional_xconfig_NO_PROPER_ASSIGN_FROM_CONST_INT_fail.cpp WILL_FAIL)
+bcm_test(NAME optional_xconfig_NO_PROPER_CONVERT_FROM_CONST_INT_pass SOURCES optional_xconfig_NO_PROPER_CONVERT_FROM_CONST_INT_pass.cpp)
+bcm_test(NAME optional_xconfig_NO_PROPER_CONVERT_FROM_CONST_INT_fail SOURCES optional_xconfig_NO_PROPER_CONVERT_FROM_CONST_INT_fail.cpp WILL_FAIL)
+bcm_test(NAME optional_xconfig_NO_LEGAL_CONVERT_FROM_REF_pass SOURCES optional_xconfig_NO_LEGAL_CONVERT_FROM_REF_pass.cpp)
+bcm_test(NAME optional_xconfig_NO_LEGAL_CONVERT_FROM_REF_fail SOURCES optional_xconfig_NO_LEGAL_CONVERT_FROM_REF_fail.cpp COMPILE_ONLY WILL_FAIL)
+

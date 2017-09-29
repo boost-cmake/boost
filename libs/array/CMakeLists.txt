@@ -1,0 +1,31 @@
+cmake_minimum_required(VERSION 3.5)
+project(boost_array)
+
+find_package(BCM)
+include(BCMDeploy)
+include(BCMSetupVersion)
+
+find_package(boost_assert)
+find_package(boost_core)
+find_package(boost_static_assert)
+find_package(boost_config)
+find_package(boost_throw_exception)
+
+bcm_setup_version(VERSION 1.64.0)
+
+add_library(boost_array INTERFACE
+)
+set_property(TARGET boost_array PROPERTY EXPORT_NAME array)
+
+target_link_libraries(boost_array INTERFACE boost::assert)
+target_link_libraries(boost_array INTERFACE boost::core)
+target_link_libraries(boost_array INTERFACE boost::static_assert)
+target_link_libraries(boost_array INTERFACE boost::config)
+target_link_libraries(boost_array INTERFACE boost::throw_exception)
+
+
+
+
+bcm_deploy(TARGETS boost_array INCLUDE include NAMESPACE boost::)
+
+add_subdirectory(test)

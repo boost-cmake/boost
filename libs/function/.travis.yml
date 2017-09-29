@@ -1,0 +1,69 @@
+# Copyright 2016 Peter Dimov
+# Distributed under the Boost Software License, Version 1.0.
+# (See accompanying file LICENSE_1_0.txt or copy at http://boost.org/LICENSE_1_0.txt)
+
+language: cpp
+
+sudo: false
+
+os:
+  - linux
+  - osx
+
+branches:
+  only:
+    - master
+    - develop
+
+install:
+  - cd ..
+  - git clone -b $TRAVIS_BRANCH --depth 1 https://github.com/boostorg/boost.git boost-root
+  - cd boost-root
+  - git submodule init libs/algorithm
+  - git submodule init libs/align
+  - git submodule init libs/assert
+  - git submodule init libs/bind
+  - git submodule init libs/chrono
+  - git submodule init libs/config
+  - git submodule init libs/core
+  - git submodule init libs/detail
+  - git submodule init libs/exception
+  - git submodule init libs/integer
+  - git submodule init libs/io
+  - git submodule init libs/iterator
+  - git submodule init libs/lambda
+  - git submodule init libs/move
+  - git submodule init libs/mpl
+  - git submodule init libs/numeric/conversion
+  - git submodule init libs/predef
+  - git submodule init libs/preprocessor
+  - git submodule init libs/range
+  - git submodule init libs/ratio
+  - git submodule init libs/rational
+  - git submodule init libs/smart_ptr
+  - git submodule init libs/static_assert
+  - git submodule init libs/system
+  - git submodule init libs/optional
+  - git submodule init libs/test
+  - git submodule init libs/throw_exception
+  - git submodule init libs/timer
+  - git submodule init libs/tuple
+  - git submodule init libs/type_index
+  - git submodule init libs/type_traits
+  - git submodule init libs/typeof
+  - git submodule init libs/utility
+  - git submodule init libs/winapi
+  - git submodule init tools/build
+  - git submodule update
+  - cp -r $TRAVIS_BUILD_DIR/* libs/function
+  - ./bootstrap.sh
+  - ./b2 headers
+
+script:
+  - TOOLSET=gcc,clang
+  - if [ $TRAVIS_OS_NAME == osx ]; then TOOLSET=clang; fi
+  - ./b2 libs/function/test toolset=$TOOLSET
+
+notifications:
+  email:
+    on_success: always
