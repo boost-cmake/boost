@@ -1,0 +1,28 @@
+include(BCMTest)
+
+find_package(boost_timer)
+find_package(boost_preprocessor)
+
+bcm_test_link_libraries(boost_program_options
+boost::timer
+boost::preprocessor
+)
+
+
+bcm_test(NAME program_options_options_description_test SOURCES options_description_test.cpp)
+bcm_test(NAME program_options_parsers_test SOURCES parsers_test.cpp ARGS ${CMAKE_CURRENT_SOURCE_DIR}/config_test.cfg)
+bcm_test(NAME program_options_variable_map_test SOURCES variable_map_test.cpp)
+bcm_test(NAME program_options_cmdline_test SOURCES cmdline_test.cpp)
+bcm_test(NAME program_options_positional_options_test SOURCES positional_options_test.cpp)
+bcm_test(NAME program_options_unicode_test SOURCES unicode_test.cpp)
+bcm_test(NAME program_options_winmain SOURCES winmain.cpp)
+bcm_test(NAME program_options_exception_test SOURCES exception_test.cpp)
+bcm_test(NAME program_options_split_test SOURCES split_test.cpp)
+bcm_test(NAME program_options_unrecognized_test SOURCES unrecognized_test.cpp)
+bcm_test(NAME program_options_required_test SOURCES required_test.cpp ARGS ${CMAKE_CURRENT_SOURCE_DIR}/required_test.cfg)
+bcm_test(NAME program_options_exception_txt_test SOURCES exception_txt_test.cpp)
+bcm_test(NAME program_options_options_description_no_rtti_test SOURCES options_description_test.cpp)
+set_target_properties(program_options_options_description_no_rtti_test PROPERTIES CXX_RTTI Off)
+target_compile_definitions(program_options_options_description_no_rtti_test PUBLIC BOOST_NO_RTTI BOOST_NO_TYPEID)
+
+

@@ -1,0 +1,61 @@
+cmake_minimum_required(VERSION 3.5)
+project(boost_numeric_odeint)
+
+find_package(BCM)
+include(BCMDeploy)
+include(BCMSetupVersion)
+
+find_package(boost_numeric_ublas)
+find_package(boost_iterator)
+find_package(boost_array)
+find_package(boost_utility)
+find_package(boost_static_assert)
+find_package(boost_type_traits)
+find_package(boost_units)
+find_package(boost_config)
+find_package(boost_math)
+find_package(boost_function)
+find_package(boost_core)
+find_package(boost_mpl)
+find_package(boost_assert)
+find_package(boost_fusion)
+find_package(boost_preprocessor)
+find_package(boost_compute)
+find_package(boost_multi_array)
+find_package(boost_bind)
+find_package(boost_range)
+find_package(boost_throw_exception)
+
+bcm_setup_version(VERSION 1.64.0)
+
+add_library(boost_numeric_odeint INTERFACE
+)
+set_property(TARGET boost_numeric_odeint PROPERTY EXPORT_NAME numeric_odeint)
+
+target_link_libraries(boost_numeric_odeint INTERFACE boost::numeric_ublas)
+target_link_libraries(boost_numeric_odeint INTERFACE boost::iterator)
+target_link_libraries(boost_numeric_odeint INTERFACE boost::array)
+target_link_libraries(boost_numeric_odeint INTERFACE boost::utility)
+target_link_libraries(boost_numeric_odeint INTERFACE boost::static_assert)
+target_link_libraries(boost_numeric_odeint INTERFACE boost::type_traits)
+target_link_libraries(boost_numeric_odeint INTERFACE boost::units)
+target_link_libraries(boost_numeric_odeint INTERFACE boost::config)
+target_link_libraries(boost_numeric_odeint INTERFACE boost::math)
+target_link_libraries(boost_numeric_odeint INTERFACE boost::function)
+target_link_libraries(boost_numeric_odeint INTERFACE boost::core)
+target_link_libraries(boost_numeric_odeint INTERFACE boost::mpl)
+target_link_libraries(boost_numeric_odeint INTERFACE boost::assert)
+target_link_libraries(boost_numeric_odeint INTERFACE boost::fusion)
+target_link_libraries(boost_numeric_odeint INTERFACE boost::preprocessor)
+target_link_libraries(boost_numeric_odeint INTERFACE boost::compute)
+target_link_libraries(boost_numeric_odeint INTERFACE boost::multi_array)
+target_link_libraries(boost_numeric_odeint INTERFACE boost::bind)
+target_link_libraries(boost_numeric_odeint INTERFACE boost::range)
+target_link_libraries(boost_numeric_odeint INTERFACE boost::throw_exception)
+
+
+
+
+bcm_deploy(TARGETS boost_numeric_odeint INCLUDE include NAMESPACE boost::)
+
+add_subdirectory(test)
