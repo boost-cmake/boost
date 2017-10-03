@@ -48,4 +48,4 @@ endif()
 
 bcm_deploy(TARGETS boost_interprocess INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

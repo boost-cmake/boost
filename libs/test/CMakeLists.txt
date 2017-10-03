@@ -126,4 +126,4 @@ bcm_shadow_notify(boost::test)
 
 bcm_deploy(TARGETS boost_prg_exec_monitor boost_test_exec_monitor boost_unit_test_framework INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

@@ -34,4 +34,4 @@ target_link_libraries(boost_type_index INTERFACE boost::preprocessor)
 
 bcm_deploy(TARGETS boost_type_index INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

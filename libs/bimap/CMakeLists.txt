@@ -48,4 +48,4 @@ target_link_libraries(boost_bimap INTERFACE boost::lambda)
 
 bcm_deploy(TARGETS boost_bimap INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

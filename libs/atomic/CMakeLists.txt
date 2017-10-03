@@ -26,4 +26,4 @@ target_include_directories(boost_atomic PRIVATE include)
 
 bcm_deploy(TARGETS boost_atomic INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

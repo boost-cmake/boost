@@ -30,4 +30,4 @@ target_link_libraries(boost_foreach INTERFACE boost::config)
 
 bcm_deploy(TARGETS boost_foreach INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

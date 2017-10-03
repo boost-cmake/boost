@@ -68,4 +68,4 @@ target_include_directories(boost_iostreams PRIVATE include)
 
 bcm_deploy(TARGETS boost_iostreams INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

@@ -22,4 +22,4 @@ target_link_libraries(boost_integer INTERFACE boost::config)
 
 bcm_deploy(TARGETS boost_integer INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

@@ -60,4 +60,4 @@ target_link_libraries(boost_xpressive INTERFACE boost::throw_exception)
 
 bcm_deploy(TARGETS boost_xpressive INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

@@ -44,4 +44,4 @@ target_link_libraries(boost_numeric_ublas INTERFACE boost::smart_ptr)
 
 bcm_deploy(TARGETS boost_numeric_ublas INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

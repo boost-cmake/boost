@@ -20,4 +20,4 @@ target_link_libraries(boost_static_assert INTERFACE boost::config)
 
 bcm_deploy(TARGETS boost_static_assert INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

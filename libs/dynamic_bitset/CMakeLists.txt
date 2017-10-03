@@ -32,4 +32,4 @@ target_link_libraries(boost_dynamic_bitset INTERFACE boost::throw_exception)
 
 bcm_deploy(TARGETS boost_dynamic_bitset INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

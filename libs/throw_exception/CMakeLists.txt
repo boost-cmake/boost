@@ -22,4 +22,4 @@ target_link_libraries(boost_throw_exception INTERFACE boost::config)
 
 bcm_deploy(TARGETS boost_throw_exception INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

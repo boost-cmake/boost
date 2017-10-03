@@ -40,4 +40,4 @@ target_link_libraries(boost_convert INTERFACE boost::math)
 
 bcm_deploy(TARGETS boost_convert INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

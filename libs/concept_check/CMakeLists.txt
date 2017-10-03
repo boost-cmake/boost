@@ -28,4 +28,4 @@ target_link_libraries(boost_concept_check INTERFACE boost::config)
 
 bcm_deploy(TARGETS boost_concept_check INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

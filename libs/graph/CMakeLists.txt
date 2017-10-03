@@ -105,4 +105,4 @@ target_include_directories(boost_graph PRIVATE include)
 
 bcm_deploy(TARGETS boost_graph INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

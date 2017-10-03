@@ -2,6 +2,8 @@
 cmake_minimum_required(VERSION 3.5)
 project(boost)
 
+option(BUILD_TESTING "Build the test suite" OFF)
+
 macro(find_package NAME)
     if(NOT "${NAME}" MATCHES "^boost_.*$" AND NOT "${NAME}" STREQUAL BCM)
         _find_package(${ARGV})

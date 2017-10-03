@@ -44,4 +44,4 @@ target_link_libraries(boost_unordered INTERFACE boost::smart_ptr)
 
 bcm_deploy(TARGETS boost_unordered INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

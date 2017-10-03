@@ -58,4 +58,4 @@ target_link_libraries(boost_numeric_odeint INTERFACE boost::throw_exception)
 
 bcm_deploy(TARGETS boost_numeric_odeint INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

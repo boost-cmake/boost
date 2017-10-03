@@ -34,4 +34,4 @@ target_link_libraries(boost_smart_ptr INTERFACE boost::throw_exception)
 
 bcm_deploy(TARGETS boost_smart_ptr INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()
