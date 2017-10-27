@@ -39,7 +39,7 @@ set(abi
 
 set(binary_format
   elf
-  mach-o
+  macho
   pe
 )
 
