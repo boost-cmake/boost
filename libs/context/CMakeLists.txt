@@ -39,7 +39,7 @@ set(abi
 
 set(binary_format
   elf
-  mach-o
+  macho
   pe
 )
 
@@ -64,7 +64,7 @@ else()
 endif()
   
 if(APPLE)
-  set(default_binary_format mach-o)
+  set(default_binary_format macho)
 elseif(WIN32)
   set(default_binary_format pe)
 else()
