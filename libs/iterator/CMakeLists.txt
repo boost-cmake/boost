@@ -46,4 +46,4 @@ target_link_libraries(boost_iterator INTERFACE boost::conversion)
 
 bcm_deploy(TARGETS boost_iterator INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

@@ -50,4 +50,4 @@ endif()
 
 bcm_deploy(TARGETS boost_dll INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

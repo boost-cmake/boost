@@ -18,4 +18,4 @@ set_property(TARGET boost_config PROPERTY EXPORT_NAME config)
 
 bcm_deploy(TARGETS boost_config INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

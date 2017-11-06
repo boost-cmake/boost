@@ -4,6 +4,7 @@ project(boost_accumulators)
 find_package(BCM)
 include(BCMDeploy)
 include(BCMSetupVersion)
+include(BCMTest)
 
 find_package(boost_core)
 find_package(boost_static_assert)
@@ -56,4 +57,4 @@ target_link_libraries(boost_accumulators INTERFACE boost::typeof)
 
 bcm_deploy(TARGETS boost_accumulators INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

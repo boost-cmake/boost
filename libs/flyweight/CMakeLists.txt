@@ -46,4 +46,4 @@ target_link_libraries(boost_flyweight INTERFACE boost::smart_ptr)
 
 bcm_deploy(TARGETS boost_flyweight INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

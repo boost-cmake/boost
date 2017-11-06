@@ -42,4 +42,4 @@ target_link_libraries(boost_statechart INTERFACE boost::conversion)
 
 bcm_deploy(TARGETS boost_statechart INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

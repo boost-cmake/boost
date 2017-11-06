@@ -60,4 +60,4 @@ target_include_directories(boost_wave PRIVATE include)
 
 bcm_deploy(TARGETS boost_wave INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

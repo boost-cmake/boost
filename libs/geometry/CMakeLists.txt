@@ -78,4 +78,4 @@ target_link_libraries(boost_geometry INTERFACE boost::throw_exception)
 
 bcm_deploy(TARGETS boost_geometry INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

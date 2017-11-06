@@ -99,4 +99,4 @@ target_include_directories(boost_python PRIVATE include)
 
 bcm_deploy(TARGETS boost_python INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

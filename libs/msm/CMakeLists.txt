@@ -52,4 +52,4 @@ target_link_libraries(boost_msm INTERFACE boost::typeof)
 
 bcm_deploy(TARGETS boost_msm INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

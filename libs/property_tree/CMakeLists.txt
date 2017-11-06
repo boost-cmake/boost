@@ -50,4 +50,4 @@ target_link_libraries(boost_property_tree INTERFACE boost::utility)
 
 bcm_deploy(TARGETS boost_property_tree INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

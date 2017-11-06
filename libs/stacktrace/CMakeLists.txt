@@ -18,4 +18,4 @@ set_property(TARGET boost_stacktrace PROPERTY EXPORT_NAME stacktrace)
 
 bcm_deploy(TARGETS boost_stacktrace INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

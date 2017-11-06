@@ -18,4 +18,4 @@ set_property(TARGET boost_predef PROPERTY EXPORT_NAME predef)
 
 bcm_deploy(TARGETS boost_predef INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

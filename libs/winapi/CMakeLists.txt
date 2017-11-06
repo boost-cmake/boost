@@ -22,4 +22,4 @@ target_link_libraries(boost_winapi INTERFACE boost::predef)
 
 bcm_deploy(TARGETS boost_winapi INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

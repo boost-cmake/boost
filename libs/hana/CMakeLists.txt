@@ -28,4 +28,4 @@ target_link_libraries(boost_hana INTERFACE boost::config)
 
 bcm_deploy(TARGETS boost_hana INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

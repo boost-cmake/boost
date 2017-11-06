@@ -54,4 +54,4 @@ endif()
 
 bcm_deploy(TARGETS boost_asio INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

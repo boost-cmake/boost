@@ -38,4 +38,4 @@ target_link_libraries(boost_proto INTERFACE boost::typeof)
 
 bcm_deploy(TARGETS boost_proto INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

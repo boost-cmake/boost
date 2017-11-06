@@ -82,6 +82,9 @@ endfunction()
 
 
 function(bcm_test)
+    if(NOT BUILD_TESTING)
+        return()
+    endif()
     set(options COMPILE_ONLY WILL_FAIL NO_TEST_LIBS)
     set(oneValueArgs NAME)
     set(multiValueArgs SOURCES CONTENT ARGS)
@@ -156,3 +159,10 @@ function(bcm_test_header)
         bcm_target_link_test_libs(${PARSE_NAME})
     endif()
 endfunction(bcm_test_header)
+
+
+function(bcm_add_test_subdirectory)
+if(BUILD_TESTING)
+    add_subdirectory(test)
+endif()
+endfunction()

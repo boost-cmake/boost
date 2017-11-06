@@ -26,4 +26,4 @@ target_link_libraries(boost_coroutine2 INTERFACE boost::context)
 
 bcm_deploy(TARGETS boost_coroutine2 INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()

@@ -33,4 +33,4 @@ target_include_directories(boost_timer PRIVATE include)
 
 bcm_deploy(TARGETS boost_timer INCLUDE include NAMESPACE boost::)
 
-add_subdirectory(test)
+bcm_add_test_subdirectory()
