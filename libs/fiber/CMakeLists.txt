@@ -26,6 +26,10 @@ src/recursive_timed_mutex.cpp
 src/recursive_mutex.cpp
 src/fiber.cpp
 src/context.cpp
+src/algo/algorithm.cpp
+src/algo/round_robin.cpp
+src/algo/shared_work.cpp
+src/algo/work_stealing.cpp
 )
 set_property(TARGET boost_fiber PROPERTY EXPORT_NAME fiber)
 
